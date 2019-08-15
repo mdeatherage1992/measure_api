@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    render json: "Welcome to the API".to_json
+    @people = Person.all
+    render json: @people
   end
 
 end
